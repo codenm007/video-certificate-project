@@ -14,7 +14,7 @@ pragma solidity >=0.7.0 <0.9.0;
      string video_iso_timestamp;
  }
  
-contract certificate_generator {
+contract GenerateCertificate {
     
 
     address private owner;
