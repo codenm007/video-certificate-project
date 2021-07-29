@@ -1,5 +1,5 @@
-const video_contract = artifacts.require("certificate");
+const Migrations = artifacts.require("Migrations");
 
-module.exports = function (deployer) {
-  deployer.deploy(video_contract,"asdsads","adssaddsads","sdadsadsadsdsa","adsadsadsadsadsadsadsadsadsads");
+module.exports = function(deployer) {
+  deployer.deploy(Migrations);
 };
