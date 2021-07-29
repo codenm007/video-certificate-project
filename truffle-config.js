@@ -2,7 +2,7 @@ const Provider = require('@truffle/hdwallet-provider');
 const address = '0xdf01FCe16B87b473eBE8c4CB73E5AA5B726072d8';
 const privateKey = 'a098e03678f5fa8af01e7e5200dd65c3ae4c05728f6a001fc73c13b0465b6517';
 
-const provider = new Provider(privateKey, 'https://rinkeby.infura.io/v3/35fea77f231f4e3d9fa91f3b41ae89a2'); 
+const provider = new Provider(privateKey, 'https://ropsten.infura.io/v3/35fea77f231f4e3d9fa91f3b41ae89a2'); 
 
 /**
  * Use this file to configure your truffle project. It's seeded with some
@@ -66,13 +66,16 @@ module.exports = {
 
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-     rinkeby: {
+     ropsten: {
        provider: () => provider,
-       network_id: 4,
+       network_id: 3,
       // gas: 5500000,        // Ropsten has a lower block limit than mainnet
       // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+      networkCheckTimeout: 1000000,
+      timeoutBlocks: 200,
+      addressIndex: 2
      },
 
     // Useful for private networks
